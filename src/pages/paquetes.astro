@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import EmpresarialButton from '../components/buttons/EmpresarialButton.astro';
+import TestimoniosButton from '../components/buttons/TestimoniosButton.astro';
+import HomeButton from '../components/buttons/HomeButton.astro';
+import CardPaquetes from '../components/CardPaquetes.astro';
+---
+
+<Layout title="OnFiber Empresarial" heroImage='/background-paquetes.png'>
+    <main class="flex flex-col h-full  w-full ">
+        <h1 class="text-3xl md:text-2xl lg:text-4xl mb-3 tracking-wides text-center">PAQUETES</h1>
+		<div class="flex flex-col text-center md:px-11 lg:px-5 xl:px-10 h-full lg:h-auto lg:mb-1 xl:h-full w-full justify-center">
+				<div class="w-full flex flex-col lg:flex-row gap-2 justify-center">
+                    <CardPaquetes title="PLAN BASICO" mbps="30 Megas" price="300" desc='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'/>
+                    <CardPaquetes title="PLAN INTERMEDIO" mbps="70 Megas" price="350" desc='Ideal para familias que ven videos en alta definición y juegan en línea sin problemas.'/>
+                    <CardPaquetes title="PLAN PRO" mbps="100 Megas" price="450" desc='Ideal para trabajar desde casa, hacer videollamadas sin interrupciones y disfrutar de streaming en 4K.'/>
+                    <CardPaquetes title="PLAN MASTER PRO" mbps="200 Megas" price="550" desc='Ideal para usuarios y negocios que necesitan internet muy rápido para tareas pesadas y muchos usuarios al mismo tiempo.'/>
+                </div>
+				
+		</div>
+        <div class="flex flex-row justify-center h-full items-center w-full">
+            <a href="/contratar" class="w-full text-center max-w-lg px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black block text-base">CONTRATAR</a>
+        </div>
+        <div class="flex flex-grow ">
+            
+        </div>
+		<div>
+			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
+				<EmpresarialButton/>
+				<HomeButton/>
+				<TestimoniosButton/>
+			</div>
+		</div>
+        
+    </main>
+</Layout>
+
+<style>
+
+	main {
+		margin: 0;
+		padding: 1rem; 
+        padding-top: 0; 
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+    
+</style>

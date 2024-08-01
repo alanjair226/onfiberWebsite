@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import EmpresarialButton from '../components/buttons/EmpresarialButton.astro';
+import TestimoniosButton from '../components/buttons/TestimoniosButton.astro';
+import HomeButton from '../components/buttons/HomeButton.astro';
+import CardPaquetes from '../components/CardPaquetes.astro';
+---
+
+<Layout title="OnFiber Empresarial" heroImage='/background-paquetes.png'>
+    <main class="flex flex-col h-full  w-full ">
+        <h1 class="text-3xl md:text-2xl lg:text-4xl mb-3 tracking-wides text-center">CONTRATAR</h1>
+		<div class="flex flex-col text-center md:px-11 lg:px-5 xl:px-10 h-full lg:h-auto lg:mb-1 xl:h-full w-full justify-center">
+            <span class="text-sm text-start color-principal">ELIJE EL PLAN QUE NECESITAS:</span>
+                <div class="w-full flex flex-col lg:flex-row gap-2 justify-center">
+                    <CardPaquetes title="PLAN BASICO" mbps="30 Megas" price="300" desc='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'/>
+                    <CardPaquetes title="PLAN INTERMEDIO" mbps="70 Megas" price="350" desc='Ideal para familias que ven videos en alta definición y juegan en línea sin problemas.'/>
+                    <CardPaquetes title="PLAN PRO" mbps="100 Megas" price="450" desc='Ideal para trabajar desde casa, hacer videollamadas sin interrupciones y disfrutar de streaming en 4K.'/>
+                    <CardPaquetes title="PLAN MASTER PRO" mbps="200 Megas" price="550" desc='Ideal para usuarios y negocios que necesitan internet muy rápido para tareas pesadas y muchos usuarios al mismo tiempo.'/>
+                </div>
+		</div>
+        <div class="flex flex-col justify-center h-full items-center">
+            <form class="p-2 flex flex-col lg:flex-row items-center gap-1 ">
+                <label class="text-center text-white text-base">
+                    INTRODUCE TU NÚMERO DE WHATSAPP Y UN AGENTE SE PONDRÁ EN CONTACTO EN MENOS DE UN MINUTO
+                </label>
+                <div class=" flex flex-row  gap-1 ">
+                    <input type="text" placeholder="Núm de WhatsApp" class="bg-white bg-opacity-5 backdrop-blur-sm border-2 rounded-lg text-white py-1 px-4 w-2/3 max-w-xs focus:outline-none focus:border-white">
+                    <button type="submit" class="bg-gray-300 text-black rounded-lg py-1 px-4 hover:bg-gray-400">ENVIAR</button>
+                </div>
+            </form>
+            <p class="text-base">O LLAMANOS: <a href="tel:4493880998" class="color-principal">449 388 09 98</a></p>
+        </div>
+        <div class="flex flex-grow ">
+            
+        </div>
+		<div>
+			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
+				<EmpresarialButton/>
+				<HomeButton/>
+				<TestimoniosButton/>
+			</div>
+		</div>
+        
+    </main>
+</Layout>
+
+<style>
+
+	main {
+		margin: 0;
+		padding: .3rem; 
+        padding-top: 0; 
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+    .color-principal{
+        color: #D3A7E4;
+    }
+</style>

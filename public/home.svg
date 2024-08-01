@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+<defs>
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5"/> <!-- Standard deviation is how much to blur -->
+      <feOffset dx="3" dy="3" result="offsetblur"/> <!-- How much to offset -->
+      <feMerge> 
+        <feMergeNode/> <!-- This contains the offset blurred image -->
+        <feMergeNode in="SourceGraphic"/> <!-- This contains the element that the filter is applied to -->
+      </feMerge>
+    </filter>
+  </defs>
+<g transform="scale(0.75) translate(8, 8)">
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" style="filter: url(#dropShadow);"></path>
+<polyline points="9 22 9 12 15 12 15 22" ></polyline>
+</g>
+</svg>

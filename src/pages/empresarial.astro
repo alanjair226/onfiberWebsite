@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import EmpresarialButton from '../components/buttons/EmpresarialButton.astro';
+import TestimoniosButton from '../components/buttons/TestimoniosButton.astro';
+import PaquetesButton from '../components/buttons/PaquetesButton.astro';
+import HomeButton from '../components/buttons/HomeButton.astro';
+---
+
+<Layout title="OnFiber Empresarial" heroImage='/background-empresarial.png'>
+    <main class="flex flex-col h-full  w-full ">
+
+		<div class="flex flex-col  text-center md:text-start md:px-9 lg:px-20 h-full  justify-center gap-2 mb-5">
+				<h1 class="text-4xl md:text-4xl lg:text-5xl mb-3 tracking-widest">EMPRESARIAL</h1>
+				<p class="text-base font-thin tracking-widest ">¡Con OnFiber, tu empresa está en buenas manos!</p>
+				<p class="text-lg tracking-widest">SERVICIO PRIORITARIO LAS 24 HORAS</p>
+		</div>
+
+        <div class="flex-grow"></div>
+		<div>
+			<div class="flex flex-col mb-8 md:mb-0  md:px-9 lg:px-20">
+				<p class="text-lg mb-2">CONTACTO: ISRAEL MACIAS</p>
+				<div class="flex flex-row items-center">
+					<img src="/mail.svg" alt="Mail" class="h-14">
+					<p class="text-lg"> <a href="mailto:israel.macias@onfiber.com.mx">israel.macias@onfiber.com.mx</a></p>
+				</div>
+				<div class="flex flex-row items-center">
+					<img src="/phone.svg" alt="Phone" class="h-14">
+					<p class="text-lg"><a href="tel:4494959810">449 495 98 10</a></p>
+				</div>
+			</div>
+			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
+				<HomeButton/>
+				<PaquetesButton/>
+				<TestimoniosButton/>
+			</div>
+		</div>
+        
+    </main>
+</Layout>
+
+<style>
+	main {
+		margin: 0;
+		padding: 1rem;  
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+</style>

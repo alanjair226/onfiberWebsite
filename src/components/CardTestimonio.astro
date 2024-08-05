@@ -1,0 +1,34 @@
+---
+interface Props {
+    logo?: string;
+    testimonio: string;
+    autor: string;
+}
+
+const { logo, testimonio, autor } = Astro.props;
+---
+
+<div class="lg:hidden card bg-white bg-opacity-5 backdrop-blur-lg rounded-2xl w-full px-3 py-3 flex flex-col items-center justify-center">
+    <p class="text-start mb-2">"{testimonio}"</p>
+    <div class="flex-grow"></div>
+    <div class="flex flex-row w-full justify-end gap-3">
+        <p>— {autor}</p>
+        <img src=`${logo}` alt="" class=" max-w-16">
+    </div>
+</div>
+
+<div class="hidden lg:flex  bg-white bg-opacity-5 backdrop-blur-lg rounded-2xl w-full px-3 py-3 flex-col items-center justify-center">
+    <p class="text-start mb-2">"{testimonio}"</p>
+    <div class="flex-grow"></div>
+    <div class="flex flex-row w-full justify-end gap-3">
+        <p>— {autor}</p>
+        <img src=`${logo}` alt="" class=" max-w-16">
+    </div>
+</div>
+
+
+<style>
+    .card {
+            flex: 1 0 auto;
+        }
+</style>

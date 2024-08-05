@@ -1,0 +1,58 @@
+---
+interface Props {
+  title: string;
+  icon: string;
+  href: string;
+}
+
+const { href, title, icon } = Astro.props;
+---
+
+<div class="button-container w-1/3">
+  <a href={href} class="button w-16 md:w-24">
+    <img src={icon} alt={`${title} icon`} class="icon w-16 md:w-24" />
+  </a>
+  <span class="title text-xs sm:text-sm md:text-base  tracking-widest">{title}</span>
+</div>
+
+<style>
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: radial-gradient(circle, #D3A7E4 0%, #A37ACC 100%);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    border: solid #D3A7E4 4px;
+  }
+
+  .button:hover {
+    background: radial-gradient(circle, #C09AC7 0%, #9169AC 100%); /* Slightly darker shade for hover effect */
+  }
+
+  .icon {
+    stroke: #D3A7E4;
+    stroke-width: 2;
+  }
+
+  .title {
+    margin-top: 10px;
+  color: #FFFFFF; /* Color del texto principal */
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+
+</style>

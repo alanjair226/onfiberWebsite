@@ -8,10 +8,10 @@ import PaquetesButton from '../components/buttons/PaquetesButton.astro';
 <Layout title="OnFiber" heroImage='/background1.png'>
     <main class="flex flex-col h-full  w-full ">
 
-		<div class="flex flex-col md:flex-row text-center md:text-start justify-between md:px-9 lg:px-20 h-full items-center">
+		<div class="flex flex-col md:flex-row text-center md:text-start justify-between md:px-9 lg:px-20 xl:px-32 h-full items-center">
 			<div>
-				<h1 class="text-4xl md:text-4xl lg:text-5xl mb-2 tracking-widest font-medium">INTERNET DE ALTA VELOCIDAD</h1>
-				<p class="text-lg tracking-widest">Internet ilimitado y ultrarrápido donde otros no llegan.</p>
+				<h1 class="text-4xl md:text-4xl lg:text-5xl mb-2 tracking-widest font-medium">INTERNET DE ALTA VELOCIDAD AGUASCALIENTES</h1>
+				<p class="text-lg tracking-widest">Internet de fibra optica, ilimitado y ultrarrápido donde otros no llegan.</p>
 			</div>
 			<img src="/Logo.svg" alt="ONFIBER Logo" class="h-48 xl:h-56 hidden md:flex ">
 		</div>
@@ -19,8 +19,8 @@ import PaquetesButton from '../components/buttons/PaquetesButton.astro';
         <div class="flex-grow"></div>
 		<div>
 			<div class="flex flex-col gap-3 text-center mb-5 max-w-80 m-auto md:hidden">
-				<a href="/contratar" class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black block text-base">CONTRATAR</a>
-				<a href="/contactanos" class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm rounded-full border-2 border-white transition-colors duration-300 hover:bg-gray-400 hover:text-white  flex flex-row justify-center text-base items-center "> <img src="/headset-icon-white.svg" alt="Contactanos" class="h-6 p-1 "> CONTACTANOS</a>
+				<a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black block text-base">CONTRATAR</a>
+				<a href="/contacto" class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm rounded-full border-2 border-white transition-colors duration-300 hover:bg-gray-400 hover:text-white  flex flex-row justify-center text-base items-center "> <img src="/headset-icon-white.svg" alt="Contactanos" class="h-6 p-1 "> CONTACTANOS</a>
 			</div>
 			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
 				<EmpresarialButton/>
@@ -40,5 +40,8 @@ import PaquetesButton from '../components/buttons/PaquetesButton.astro';
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+	}
+	.color-principal{
+		color: #D3A7E4;
 	}
 </style>

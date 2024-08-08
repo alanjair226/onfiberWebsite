@@ -9,14 +9,26 @@ interface Props {
 const { mbps, title, price, desc } = Astro.props;
 ---
 
-<div class=" justify-between flex flex-col w-full  lg:w-1/4 xl:w-1/5  bg-white bg-opacity-0 backdrop-blur-sm border-2 rounded-lg border-white-300 px-4 py-1 lg:px-2 ">
-    <div class="flex flex-row lg:flex-col justify-between items-center">
-        <h2 class=" text-xl text-start lg:text-center">{title}</h2>
-        <p class="text-lg lg:text-center hidden lg:flex">{mbps}</p>
-        <p class="text-lg lg:hidden">${price}</p>
-    </div>
-    <p class="text-base text-center hidden lg:flex">{desc}</p>
-    <p class="text-lg text-start lg:hidden">{mbps}</p>
-    <p class="text-lg hidden lg:block text-end ">${price}</p>
+<div class="card justify-between flex flex-col w-full lg:w-1/4 xl:w-1/5 bg-white bg-opacity-0 backdrop-blur-sm border-2 rounded-lg border-white-300 px-4 py-1 lg:px-2 ">
+  <div class="flex flex-row lg:flex-col justify-between items-center">
+      <h2 class="text-xl text-start lg:text-center">{title}</h2>
+      <p class="text-lg lg:text-center hidden lg:flex">{mbps}</p>
+      <p class="text-lg lg:hidden">${price}</p>
+  </div>
+  <p class="text-base text-center hidden lg:flex">{desc}</p>
+  <p class="text-lg text-start lg:hidden">{mbps}</p>
+  <p class="text-lg hidden lg:block text-end ">${price}</p>
 </div>
 
+<style>
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: #be4eea; /* Cambia el color del borde en hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutilmente más opaco */
+  }
+</style>

@@ -1,0 +1,88 @@
+---
+import Navbar from '../components/Navbar.astro';
+interface Props {
+	title: string;
+	heroImage?: string;
+	leftHref?: string;
+	rightHref?: string;
+}
+const { title, heroImage, leftHref, rightHref } = Astro.props;
+import '@fontsource/titillium-web';
+import '@fontsource/chakra-petch';
+import Footer from '../components/Footer.astro';
+import EmpresarialButton from '../components/buttons/EmpresarialButton.astro';
+import TestimoniosButton from '../components/buttons/TestimoniosButton.astro';
+import PaquetesButton from '../components/buttons/PaquetesButton.astro';
+import HomeButton from '../components/buttons/HomeButton.astro';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/Logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+	</head>
+	<body class="bg-gray-900 text-white">
+		<section class="relative h-svh flex flex-col bg-cover bg-center py-4" style={`background-image: url(${heroImage});`}>
+			<div class="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+			<Navbar />
+			<div class="relative z-10 flex flex-col flex-grow">
+				
+				<div class="relative z-10 flex flex-row items-center justify-between h-full pt-24 lg:pt-24">
+					
+					<!-- Left navigation button -->
+					<div class="flex items-center justify-center w-12 h-12 lg:w-32 lg:h-16">
+						{leftHref ? (
+							<a href={leftHref}>
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#D3A7E4" class="w-8 h-8 lg:w-20 lg:h-20">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+								</svg>
+							</a>
+						) : (
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#D3A7E4" class="w-8 h-8 lg:w-20 lg:h-20 visibility-hidden">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+							</svg>
+						)}
+					</div>
+					<slot />
+					<!-- Right navigation button -->
+					<div class="flex items-center justify-center w-12 h-12 lg:w-32 lg:h-16">
+						{rightHref ? (
+							<a href={rightHref}>
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#D3A7E4" class="w-8 h-8 lg:w-20 lg:h-20">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+								</svg>
+							</a>
+						) : (
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#D3A7E4" class="w-8 h-8 lg:w-20 lg:h-20 visibility-hidden">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+							</svg>
+						)}
+					</div>
+				</div>
+				<div class="flex flex-grow"></div>
+				<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto px-8 md:px-5 lg:px-4 ">
+					<EmpresarialButton/>
+					<PaquetesButton/>
+					<HomeButton/>
+				</div>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	html {
+		font-family: 'Titillium Web', 'Chakra Petch', sans-serif;
+	}
+	.visibility-hidden {
+		visibility: hidden;
+	}
+</style>

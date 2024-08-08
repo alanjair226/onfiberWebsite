@@ -1,0 +1,73 @@
+---
+import LayoutTestimonios from '../../layouts/LayoutTestimonios.astro';
+import Testimonio from '../../components/Testimonio.astro';
+---
+
+<LayoutTestimonios title="OnFiber" heroImage='/background-paquetes.png'leftHref='/testimonios/1' rightHref="/testimonios/3">
+    <main id="content-slot" class="flex flex-col h-full w-full justify-center items-center text-center opacity-0">
+        <Testimonio
+            testimonial="OnFiber ha transformado nuestra experiencia de internet en casa. La velocidad y estabilidad son inigualables."
+            name="Roberto Rodríguez"
+            subText="Padre de Familia"
+            imageSrc="/testimonios/testimonio2.jpg"
+        />
+    </main>
+</LayoutTestimonios>
+
+<style>
+    main {
+        margin: 0;
+        padding: 0rem;  
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .color-principal {
+        color: #D3A7E4;
+    }
+    .relative {
+        position: relative;
+    }
+    .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .left-arrow {
+        left: 10px;
+    }
+    .right-arrow {
+        right: 10px;
+    }
+    .nav-arrow.hidden {
+        display: none;
+    }
+    .fade-in {
+        animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contentSlot = document.getElementById('content-slot');
+        if (contentSlot) {
+            contentSlot.classList.add('fade-in');
+        }
+    });
+</script>

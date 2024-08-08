@@ -1,0 +1,81 @@
+---
+import LayaoutNoOneScreen from "../layouts/LayaoutNoOneScreen.astro"
+---
+
+<LayaoutNoOneScreen title="Guía de Inicio - OnFiber" heroImage='/background-paquetes.png'>
+    <div slot="hero">
+        <h1  class="text-3xl lg:text-5xl font-bold mb-6">¡Gracias por elegir OnFiber!</h1>
+        <p class="mb-4">Estamos comprometidos en brindarte la mejor experiencia en conexión de internet. Si tienes alguna duda o problema, nuestro equipo de soporte técnico está siempre a tu disposición para ayudarte en lo que necesites.</p>
+    </div>
+    <div slot="content">
+        <section class="py-8">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold">Guía de Inicio</h2>
+                    <p class="text-lg">Bienvenido a OnFiber. Aquí encontrarás todo lo que necesitas para comenzar.</p>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">¿Cómo pagar?</h3>
+                    <div class="space-y-4">
+                        <details class="bg-gray-900 p-4 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Pagar por Oxxo</summary>
+                            <div class="mt-2">
+                                <p>Para pagar por Oxxo es necesario ingresar al portal de Onfiber. Para ingresar, al contratar el servicio, el sistema le hizo llegar un usuario y contraseña vía SMS al número registrado en la contratación. Estos son sus datos para ingresar al portal.</p>
+                                <p class="mt-2"><a href="https://onfiber.mikrowisp.net/cliente/login" target="_blank" class="text-blue-400 underline">PORTAL DE CLIENTES</a></p>
+                                <p>Si no cuenta con estos datos, puede comunicarse por WhatsApp al siguiente número para que se los proporcione: <a href="https://wa.link/jh5htf" target="_blank" class="text-blue-400 underline">4493275135</a>.</p>
+                                <p class="mt-2">Recomendamos descargar el manual para no tener problemas en el proceso: <a href="assets/docs/manual_de_pago_oxxo_onfiber.pdf" target="_blank" class="text-blue-400 underline">Descargar manual</a></p>
+                            </div>
+                        </details>
+                        <details class="bg-gray-900 p-4 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Openpay (Tarjeta de débito o crédito)</summary>
+                            <div class="mt-2">
+                                <p>Para pagar por este método debes ingresar al portal de clientes con el usuario y contraseña que te llegó vía SMS cuando contrataste el servicio. <a href="https://onfiber.mikrowisp.net/cliente/login" target="_blank" class="text-blue-400 underline">PORTAL DE CLIENTES</a></p>
+                                <p class="mt-2">Si no te llegó tu usuario y contraseña, los perdiste o simplemente no los recuerdas, por favor comunícate vía WhatsApp y con gusto te los proporcionaremos:</p>
+                                <p class="mt-2">WhatsApp: <a href="https://wa.link/jh5htf" target="_blank" class="text-blue-400 underline">449 327 51 35</a>.</p>
+                                <p class="mt-2">A continuación, un manual que te enseña paso por paso cómo pagar vía Openpay:</p>
+                                <p class="mt-2"><a href="assets/docs/Manual de pago Openpay.pdf" target="_blank" class="text-blue-400 underline">Descargar manual</a></p>
+                            </div>
+                        </details>
+                        <details class="bg-gray-900 p-4 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">¿Puedo pagar en puntos físicos?</summary>
+                            <div class="mt-2">
+                                <p>Estos son nuestros puntos de pago:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2">
+                                    <li>MONTE VERDE: Esquina Senecio y Garambullo #186 "Mini Super Mendoza"</li>
+                                    <li>PASEOS DE SAN ANTONIO: Avenida Rancho San Antonio esquina Paseo de la Habana "Abarrotes Gaby"</li>
+                                    <li>HACIENDA SAN MARCOS: Avenida Hacienda Santoral, cerca del Oxxo "Mini Super San Marcos"</li>
+                                    <li>URBI VILLAS DEL VERGEL: San Diego OTE #301 "URBI INTERNET"</li>
+                                    <li>Santa Monica: San Andres y San Esteban "Mr. FROGS Santa Monica"</li>
+									<li>Cartuja: "SUPER LA CARTUJA."</li>
+                                </ul>
+                                <p class="mt-2">Recuerda que es importante llevar el monto exacto y proporcionar el número de cuenta o referencia que te hemos asignado.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="card mb-8 p-6 bg-gray-900 text-white rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">¿Cómo ponerme en contacto?</h3>
+                    <p class="mb-3">Los únicos números para dar soporte y resolver dudas son los siguientes:</p>
+                    <p class="mb-3">WhatsApp: <a href="https://wa.link/jh5htf" target="_blank" class="text-blue-400 underline">449 327 51 35</a>.</p>
+                    <p class="mb-3">Llamada telefónica: 449 388 09 98</p>
+                    <p class="font-bold">FAVOR DE NO COMUNICARSE CON SU INSTALADOR O VENDEDOR.</p>
+                </div>
+                <div class="card p-6 bg-gray-900 text-white rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">Cuidados y recomendaciones con el modem</h3>
+                    <p class="mb-3">El modem es un dispositivo que se utiliza para conectarse a internet. Funciona como un puente entre la señal de internet que llega a tu domicilio y tus dispositivos electrónicos (computadora, teléfono, tablet, etc.).</p>
+                    <p class="mb-3">El rango de alcance del modem es de aproximadamente 5 metros a la redonda para que sea eficaz.</p>
+                    <p class="mb-3">Si tu modem tiene la característica de conexión de doble banda (2.4 GHz y 5 GHz), se recomienda conectarse a la red de 5 GHz para obtener una conexión más rápida y estable.</p>
+                    <p class="mb-3">Es importante mantener el modem limpio y libre de plagas de insectos, ya que pueden afectar su funcionamiento. También se recomienda no manipularlo demasiado, ya que esto podría dañar el cableado interno y afectar su desempeño.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</LayaoutNoOneScreen>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+		font-family: 'Titillium Web', 'Chakra Petch', sans-serif;
+    }
+</style>

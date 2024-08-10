@@ -11,13 +11,12 @@ import CardPaquetes from '../components/CardPaquetes.astro';
     <main class="flex flex-col h-full  w-full ">
         <h1 class="text-3xl md:text-2xl lg:text-4xl mb-3 tracking-wides text-center">PAQUETES</h1>
 		<div class="flex flex-col text-center md:px-11 lg:px-5 xl:px-10 h-full lg:h-full lg:mb-1 xl:h-full w-full justify-end">
-				<div class="w-full flex flex-col lg:flex-row gap-4 justify-center">
-                    <CardPaquetes title="PLAN BASICO" mbps="30 Megas" price="300" desc='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'/>
-                    <CardPaquetes title="PLAN INTERMEDIO" mbps="70 Megas" price="350" desc='Ideal para familias que ven videos en alta definición y juegan en línea sin problemas.'/>
-                    <CardPaquetes title="PLAN PRO" mbps="100 Megas" price="450" desc='Ideal para trabajar desde casa, hacer videollamadas sin interrupciones y disfrutar de streaming en 4K.'/>
-                    <CardPaquetes title="PLAN MASTER PRO" mbps="200 Megas" price="550" desc='Ideal para usuarios y negocios que necesitan internet muy rápido para tareas pesadas y muchos usuarios al mismo tiempo.'/>
-                </div>
-				
+			<div class="w-full flex flex-col lg:flex-row gap-4 justify-center">
+				<a href="#" class="no-underline"><CardPaquetes color='#1E90FF' title="PLAN BASICO" mbps="30 Megas" price="300" desc='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'/></a>
+				<a href="#" class="no-underline"><CardPaquetes color='#FF6F61' title="PLAN INTERMEDIO" mbps="70 Megas" price="350" desc='Ideal para familias que ven videos en alta definición y juegan en línea sin problemas.'/></a>
+				<a href="#" class="no-underline"><CardPaquetes color='#FFB300' title="PLAN PRO" mbps="100 Megas" price="450" desc='Ideal para trabajar desde casa, hacer videollamadas sin interrupciones y disfrutar de streaming en 4K.'/></a>
+				<a href="#" class="no-underline"><CardPaquetes color='#8A2BE2' title="PLAN MASTER PRO" mbps="200 Megas" price="550" desc='Ideal para usuarios y negocios que necesitan internet muy rápido para tareas pesadas y muchos usuarios al mismo tiempo.'/></a>
+			</div>
 		</div>
         <div class="flex flex-col justify-center h-full items-center">
 			<p>PARA CONTRTAR:</p>
@@ -39,7 +38,6 @@ import CardPaquetes from '../components/CardPaquetes.astro';
 </Layout>
 
 <style>
-
 	main {
 		margin: 0;
 		padding: 1rem; 
@@ -49,7 +47,14 @@ import CardPaquetes from '../components/CardPaquetes.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	}
-    .color-principal{
+
+	.color-principal {
 		color: #D3A7E4;
+	}
+
+	/* Evitar subrayado en los enlaces que envuelven las cards */
+	a.no-underline {
+		text-decoration: none;
+		display: block;
 	}
 </style>

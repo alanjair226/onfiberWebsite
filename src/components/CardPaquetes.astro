@@ -4,12 +4,15 @@ interface Props {
   mbps: string;
   price: string;
   desc: string;
+  color: string;
 }
 
-const { mbps, title, price, desc } = Astro.props;
+const { mbps, title, price, desc, color } = Astro.props;
 ---
 
-<div class="card justify-between flex flex-col w-full lg:w-1/4 xl:w-1/5 bg-white bg-opacity-0 backdrop-blur-sm border-2 rounded-lg border-white-300 px-4 py-1 lg:px-2 ">
+<div 
+  class="card justify-between flex flex-col w-full lg:w-1/4 xl:w-1/5 bg-white bg-opacity-0 backdrop-blur-sm border-2 rounded-lg px-4 py-1 lg:px-2" 
+  style={`border-color: ${color}; --hover-color: ${color};`}>
   <div class="flex flex-row lg:flex-col justify-between items-center">
       <h2 class="text-xl text-start lg:text-center">{title}</h2>
       <p class="text-lg lg:text-center hidden lg:flex">{mbps}</p>
@@ -22,13 +25,52 @@ const { mbps, title, price, desc } = Astro.props;
 
 <style>
   .card {
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   }
-  
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    width: 300%;
+    height: 300%;
+    background-color: var(--hover-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out, top 0s, left 0s;
+    z-index: 0;
+  }
+
+  .card:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .card > * {
+    position: relative;
+    z-index: 1;
+  }
+
   .card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    border-color: #be4eea; /* Cambia el color del borde en hover */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutilmente más opaco */
+    border-color: var(--hover-color); /* Cambia el color del borde en hover */
   }
 </style>
+
+<script>
+  const cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>;
+
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', function(e) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+</script>

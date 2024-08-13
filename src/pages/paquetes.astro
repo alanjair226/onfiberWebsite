@@ -12,10 +12,10 @@ import CardPaquetes from '../components/CardPaquetes.astro';
         <h1 class="text-3xl md:text-2xl lg:text-4xl mb-3 tracking-wides text-center">PAQUETES</h1>
 		<div class="flex flex-col text-center md:px-11 lg:px-5 xl:px-10 h-full lg:h-full lg:mb-1 xl:h-full w-full justify-end">
 			<div class="w-full flex flex-col lg:flex-row gap-4 justify-center">
-				<CardPaquetes color='#1E90FF' href='/plan-basico' title="PLAN BASICO" mbps="30 Megas" price="300" desc='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'/>
-                <CardPaquetes color='#FF6F61' href='/plan-intermedio' title="PLAN INTERMEDIO" mbps="70 Megas" price="350" desc='Ideal para familias que ven videos en alta definición y juegan en línea sin problemas.'/>
-                <CardPaquetes color='#FFB300' href='/plan-pro' title="PLAN PRO" mbps="100 Megas" price="450" desc='Ideal para trabajar desde casa, hacer videollamadas sin interrupciones y disfrutar de streaming en 4K.'/>
-                <CardPaquetes color='#8A2BE2' href='/plan-master-pro' title="PLAN MASTER PRO" mbps="200 Megas" price="550" desc='Ideal para usuarios y negocios que necesitan internet muy rápido para tareas pesadas y muchos usuarios al mismo tiempo.'/>
+				<CardPaquetes href='/paquetes/100mb' color='#1E90FF' title="PLAN BASICO" mbps="30 Megas" price="300" desc='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'/></a>
+				<CardPaquetes href='/paquete-detalle' color='#FF6F61' title="PLAN INTERMEDIO" mbps="70 Megas" price="350" desc='Ideal para familias que ven videos en alta definición y juegan en línea sin problemas.'/></a>
+				<CardPaquetes href='/paquete-detalle' color='#FFB300' title="PLAN PRO" mbps="100 Megas" price="450" desc='Ideal para trabajar desde casa, hacer videollamadas sin interrupciones y disfrutar de streaming en 4K.'/></a>
+				<CardPaquetes href='/paquete-detalle' color='#8A2BE2' title="PLAN MASTER PRO" mbps="200 Megas" price="550" desc='Ideal para usuarios y negocios que necesitan internet muy rápido para tareas pesadas y muchos usuarios al mismo tiempo.'/></a>
 			</div>
 		</div>
         <div class="flex flex-col justify-center h-full items-center">
@@ -57,9 +57,4 @@ import CardPaquetes from '../components/CardPaquetes.astro';
 		text-decoration: none;
 		display: block;
 	}
-	.card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-  }
 </style>

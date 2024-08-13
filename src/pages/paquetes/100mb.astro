@@ -1,0 +1,35 @@
+---
+import LayoutDetallePaquetes from '../../layouts/LayoutDetallePaquetes.astro';
+
+import EmpresarialButton from '../../components/buttons/EmpresarialButton.astro';
+import TestimoniosButton from '../../components/buttons/TestimoniosButton.astro';
+import HomeButton from '../../components/buttons/HomeButton.astro';
+const { searchParams } = Astro.url;
+const paramValue = searchParams.get('paramName'); // Reemplaza 'paramName' con el nombre de tu query parameter
+---
+
+<LayoutDetallePaquetes mb="100" dispositivos='2' color='#1E90FF' hommeOffice='no' streaming='hd' gaming='no'  heroImage='/background-paquetes.png'>
+
+</LayoutDetallePaquetes>
+
+<style>
+	main {
+		margin: 0;
+		padding: 1rem; 
+        padding-top: 0; 
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	.color-principal {
+		color: #D3A7E4;
+	}
+
+	/* Evitar subrayado en los enlaces que envuelven las cards */
+	a.no-underline {
+		text-decoration: none;
+		display: block;
+	}
+</style>

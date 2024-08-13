@@ -1,0 +1,141 @@
+---
+import Navbar from "../components/Navbar.astro";
+interface Props {
+	mb: string;
+	color: string;
+	heroImage?: string;
+	gaming: string;
+	hommeOffice: string;
+	streaming: string;
+	dispositivos: string;
+}
+const { mb, heroImage, color, gaming, hommeOffice, streaming, dispositivos } =
+	Astro.props;
+import "@fontsource/titillium-web";
+import "@fontsource/chakra-petch";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+import EmpresarialButton from "../components/buttons/EmpresarialButton.astro";
+import HomeButton from "../components/buttons/HomeButton.astro";
+import TestimoniosButton from "../components/buttons/TestimoniosButton.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/Logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>OnFiber {mb}</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-gray-900 text-white">
+		<section
+			class="relative h-svh bg-cover bg-center"
+			style={`background-image: url(${heroImage});`}
+		>
+			<div class="absolute inset-0 bg-black bg-opacity-30"></div>
+			<Navbar />
+
+			<div
+				class="relative z-10 flex flex-col items-center justify-start h-full pt-24 lg:pt-24"
+			>
+				<main class="flex flex-col h-full w-full px-8 lg:items-center ">
+					<div
+						class="w-full h-full flex flex-col items-center lg:flex-row lg:w-2/3 lg:gap-10 lg:items-center" 
+					>
+						<div class="flex flex-col w-full">
+							<div
+							class="w-full p-10 text-center rounded-lg border-white border-2 mt-5"
+							style=`background-color: ${color}`
+							>
+							<p class="mb text-xl">100 Megas</p>
+							</div>
+
+							<div class="w-full lg:flex flex-row hidden ">
+								<div class="flex flex-row gap-3 w-2/3 py-2 items-center">
+									<img
+										src="/wifi.svg"
+										alt={`wifi icon`}
+										class="icon w-6"
+									/>
+									<p>WIFI 2.4G Y 5G</p>
+								</div>
+
+								<div class="flex flex-row gap-3 w-2/3 py-2 items-center">
+									<img
+										src="/fibra.svg"
+										alt={`fibra icon`}
+										class="icon w-6"
+									/>
+									<p>Fibra Optica</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="w-2/3 flex flex-col lg:hidden">
+							<div class="flex flex-row gap-3 w-2/3 py-2 mt-4 items-center">
+								<img
+									src="/wifi.svg"
+									alt={`wifi icon`}
+									class="icon w-6"
+								/>
+								<p>WIFI 2.4G Y 5G</p>
+							</div>
+
+							<div class="flex flex-row gap-3 w-2/3 py-2 items-center">
+								<img
+									src="/fibra.svg"
+									alt={`fibra icon`}
+									class="icon w-6"
+								/>
+								<p>Fibra Optica</p>
+							</div>
+						</div>
+						<div class="h-full w-full flex flex-col justify-center items-center lg:w-full">
+							<div
+								class="flex h-fit flex-col justify-center gap-3 w-4/5 lg:w-full p-2 px-3 rounded-lg" 
+								style=`border: solid 2px ${color};`
+							>
+								<h3 class="text-lg font-bold mb-2 text-cente text-center">
+									Recomendaciones
+								</h3>
+								<ul>
+									<li>Dispositivos: 5-10</li>
+									<li>Home office: {hommeOffice}</li>
+									<li>Gaming: {gaming}</li>
+									<li>Streaming: {streaming}</li>
+								</ul>
+							</div>
+						</div>
+						
+						
+					</div>
+					<div class="w-full flex justify-center">
+						<a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="px-5 py-2 my-5 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black block text-base w-2/3 lg:w-1/4 text-center">CONTRATAR</a>
+					</div>
+					<div class="flex flex-grow"></div>
+
+					<div
+						class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto px-8 md:px-5 lg:px-4"
+					>
+						<EmpresarialButton />
+						<HomeButton />
+						<TestimoniosButton />
+					</div>
+				</main>
+			</div>
+		</section>
+	</body><Footer />
+</html>
+
+<style>
+	html {
+		font-family: "Titillium Web", "Chakra Petch", sans-serif;
+	}
+	.mb {
+		font-family: "Chakra Petch";
+	}
+</style>

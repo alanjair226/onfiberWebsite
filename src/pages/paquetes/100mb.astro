@@ -8,7 +8,16 @@ const { searchParams } = Astro.url;
 const paramValue = searchParams.get('paramName'); // Reemplaza 'paramName' con el nombre de tu query parameter
 ---
 
-<LayoutDetallePaquetes mb="100" dispositivos='2' color='#1E90FF' hommeOffice='no' streaming='hd' gaming='no'  heroImage='/background-paquetes.png'>
+<LayoutDetallePaquetes 
+mb="100" 
+dispositivos='2' 
+color='#1E90FF' 
+scolor='#105fad'
+hommeOffice='no' 
+streaming='hd' 
+gaming='no'  
+heroImage='/background-paquetes.png'
+descripcion='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'>
 
 </LayoutDetallePaquetes>
 

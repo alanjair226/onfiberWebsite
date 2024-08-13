@@ -1,0 +1,40 @@
+---
+interface Props {
+  planName: string;
+  speed: string;
+  price: string;
+  features: string[];
+}
+
+const { planName, speed, price, features } = Astro.props;
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title={`Detalles del plan ${planName}`} heroImage='/background-paquetes.png'>
+    <main class="flex flex-col h-full w-full p-4 lg:p-8">
+        <!-- Plan Seleccionado -->
+        <section class="bg-white bg-opacity-10 backdrop-blur-sm border-2 rounded-lg p-6 lg:w-3/4 mx-auto mb-8">
+            <h2 class="text-2xl mb-4">Tu plan:</h2>
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="text-left">
+                    <h3 class="text-3xl mb-2">{speed}</h3>
+                    <p class="text-lg">{planName}</p>
+                </div>
+                <div class="mt-4 lg:mt-0">
+                    <ul>
+                        {features.map((feature) => (
+                          <li class="mb-2"><strong>{feature}</strong></li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen de Compra -->
+        <section class="bg-white bg-opacity-10 backdrop-blur-sm border-2 rounded-lg p-6 lg:w-1/4 mx-auto mb-8">
+            <h2 class="text-2xl mb-4">Resumen de compra</h2>
+            <p class="text-lg">Tu plan: <strong>{price}</strong></p>
+            <button class="bg-blue-500 text-white rounded-full px-6 py-2 mt-4 w-full">Continuar</button>
+        </section>
+    </main>
+</Layout>

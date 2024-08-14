@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 import EmpresarialButton from '../components/buttons/EmpresarialButton.astro';
-import TestimoniosButton from '../components/buttons/TestimoniosButton.astro';
+import PaymentsButton from '../components/buttons/PaymentsButton.astro';
 import HomeButton from '../components/buttons/HomeButton.astro';
 import CardPaquetes from '../components/CardPaquetes.astro';
 ---
@@ -12,10 +12,41 @@ import CardPaquetes from '../components/CardPaquetes.astro';
         <h1 class="text-3xl md:text-2xl lg:text-4xl mb-3 tracking-wides text-center">PAQUETES</h1>
 		<div class="flex flex-col text-center md:px-11 lg:px-5 xl:px-10 h-full lg:h-full lg:mb-1 xl:h-full w-full justify-end">
 			<div class="w-full flex flex-col lg:flex-row gap-4 justify-center">
-				<CardPaquetes href='/paquetes/100mb' color='#1E90FF' title="PLAN BASICO" mbps="30 Megas" price="300" desc='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'/></a>
-				<CardPaquetes href='/paquete-detalle' color='#FF6F61' title="PLAN INTERMEDIO" mbps="70 Megas" price="350" desc='Ideal para familias que ven videos en alta definición y juegan en línea sin problemas.'/></a>
-				<CardPaquetes href='/paquete-detalle' color='#FFB300' title="PLAN PRO" mbps="100 Megas" price="450" desc='Ideal para trabajar desde casa, hacer videollamadas sin interrupciones y disfrutar de streaming en 4K.'/></a>
-				<CardPaquetes href='/paquete-detalle' color='#8A2BE2' title="PLAN MASTER PRO" mbps="200 Megas" price="550" desc='Ideal para usuarios y negocios que necesitan internet muy rápido para tareas pesadas y muchos usuarios al mismo tiempo.'/></a>
+				<CardPaquetes 
+  href='/paquetes/30mb' 
+  color='#1E90FF' 
+  title="PLAN BASICO" 
+  mbps="30 Megas" 
+  price="300" 
+  desc='Conéctate sin complicaciones. Ideal para hogares pequeños y navegación tranquila.' 
+/>
+
+<CardPaquetes 
+  href='/paquetes/70mb' 
+  color='#FF6F61' 
+  title="PLAN INTERMEDIO" 
+  mbps="70 Megas" 
+  price="350" 
+  desc='Un plan versátil para familias con múltiples actividades en línea.' 
+/>
+
+<CardPaquetes 
+  href='/paquetes/100mb' 
+  color='#FFB300' 
+  title="PLAN PRO" 
+  mbps="100 Megas" 
+  price="450" 
+  desc='Equilibrio perfecto entre trabajo y entretenimiento, sin interrupciones.' 
+/>
+
+<CardPaquetes 
+  href='/paquetes/200mb' 
+  color='#8A2BE2' 
+  title="PLAN MASTER PRO" 
+  mbps="200 Megas" 
+  price="550" 
+  desc='Máxima conexión para múltiples usuarios y tareas exigentes.' 
+/>
 			</div>
 		</div>
         <div class="flex flex-col justify-center h-full items-center">
@@ -30,7 +61,7 @@ import CardPaquetes from '../components/CardPaquetes.astro';
 			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
 				<EmpresarialButton/>
 				<HomeButton/>
-				<TestimoniosButton/>
+				<PaymentsButton/>
 			</div>
 		</div>
         

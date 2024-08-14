@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import EmpresarialButton from '../components/buttons/EmpresarialButton.astro';
-import TestimoniosButton from '../components/buttons/TestimoniosButton.astro';
+import PaymentsButton from '../components/buttons/PaymentsButton.astro';
 import PaquetesButton from '../components/buttons/PaquetesButton.astro';
+import { TextEffect } from '../components/jsx/text-effect';
 ---
 
 <Layout title="OnFiber" heroImage='/background1.png'>
@@ -11,7 +12,15 @@ import PaquetesButton from '../components/buttons/PaquetesButton.astro';
 		<div class="flex flex-col md:flex-row text-center md:text-start justify-between md:px-9 lg:px-20 xl:px-32 h-full items-center">
 			<div>
 				<h1 class="text-4xl md:text-4xl lg:text-5xl mb-2 tracking-widest font-medium">INTERNET DE ALTA VELOCIDAD AGUASCALIENTES</h1>
-				<p class="text-lg tracking-widest">Internet de fibra optica, ilimitado y ultrarrápido donde otros no llegan.</p>
+				
+				<TextEffect client:idle
+									per="word"
+									preset="blur"
+									as="p"
+									className="text-lg tracking-widest"
+									>
+									Internet de fibra optica, ilimitado y ultrarrápido donde otros no llegan.
+								</TextEffect>
 			</div>
 			<img src="/Logo.svg" alt="ONFIBER Logo" class="h-48 xl:h-56 hidden md:flex ">
 		</div>
@@ -25,7 +34,7 @@ import PaquetesButton from '../components/buttons/PaquetesButton.astro';
 			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
 				<EmpresarialButton/>
 				<PaquetesButton/>
-				<TestimoniosButton/>
+				<PaymentsButton/>
 			</div>
 		</div>
         

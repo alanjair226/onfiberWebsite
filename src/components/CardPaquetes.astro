@@ -11,7 +11,8 @@ interface Props {
 const { mbps, title, price, desc, color, href } = Astro.props;
 ---
 
-<div
+<a 
+  href={`${href}`} 
   class="card justify-between flex flex-col w-full lg:w-1/4 xl:w-1/5 bg-white bg-opacity-0 backdrop-blur-sm border-2 rounded-lg px-4 py-1 lg:px-2" 
   style={`border-color: ${color}; --hover-color: ${color};`}>
   
@@ -22,23 +23,24 @@ const { mbps, title, price, desc, color, href } = Astro.props;
   </div>
   
   <p class="text-base text-center hidden lg:flex">{desc}</p>
-  <div class="text-lg  lg:hidden flex justify-between">
+  <div class="text-lg lg:hidden flex justify-between">
     <p class="">{mbps}</p>
-    <a href=`${href}` class="m-i ">Más información</a>
+    <span class="m-i">Más información</span>
   </div>
 
   
   <!-- El enlace dentro de la card -->
-  <a href=`${href}` class="m-i text-lg text-center hidden lg:flex justify-center">Más información</a>
+  <span class="m-i text-lg text-center hidden lg:flex justify-center">Más información</span>
   
   <p class="text-lg hidden lg:block text-end ">${price}</p>
-</div>
+</a>
 
 <style>
   .card {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    text-decoration: none; /* Para eliminar el subrayado del enlace */
   }
 
   .card::before {
@@ -69,9 +71,11 @@ const { mbps, title, price, desc, color, href } = Astro.props;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     border-color: var(--hover-color);
   }
+  
   .m-i{
-    color: var(--hover-color) ;
+    color: var(--hover-color);
   }
+  
   .card:hover .m-i {
     color: black;
     font-weight: bold;
@@ -100,3 +104,4 @@ const { mbps, title, price, desc, color, href } = Astro.props;
     });
   });
 </script>
+

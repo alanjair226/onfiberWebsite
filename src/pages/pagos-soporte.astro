@@ -1,0 +1,76 @@
+---
+import LayaoutNoOneScreen from "../layouts/LayaoutNoOneScreen.astro"
+
+import EmpresarialButton from '../components/buttons/EmpresarialButton.astro';
+import PaymentsButton from '../components/buttons/PaymentsButton.astro';
+import HomeButton from '../components/buttons/HomeButton.astro';
+import {DialogBasicOne} from '../components/jsx/dialog-basic-1';
+---
+
+<LayaoutNoOneScreen title="Métodos de pago" heroImage='/background-paquetes.png'>
+    <main class="flex flex-col h-full  w-full mt-28 lg:mt-20 ">
+        <h1 class="text-3xl md:text-2xl lg:text-4xl mb-8 tracking-wides text-center ">MÉTODOS DE PAGO</h1>
+			<div class="flex flex-wrap w-full justify-center gap-10 items-center self-center ">
+                <DialogBasicOne 
+            client:idle
+            
+            imageSrc="/oxxo-logo.png"
+            imageAlt="Pagar en Oxxo"
+            title="Pagar por Oxxo"
+            subtitle="Oxxo"
+            descriptions={["Para pagar por Oxxo es necesario ingresar al portal de Onfiber. Para ingresar, al contratar el servicio, el sistema le hizo llegar un usuario y contraseña vía SMS al número registrado en la contratación. Estos son sus datos para ingresar al portal."]}
+            linkUrl="https://onfiber.mikrowisp.net/cliente/login"
+            linkText="PORTAL DE CLIENTES"
+          />
+          <DialogBasicOne
+            client:idle
+            imageSrc="/pago-tarjeta.png"
+            imageAlt="Pagar con Openpay"
+            title="Pagar con Openpay"
+            subtitle="Tarjeta de débito o crédito"
+            descriptions={[ "Para pagar por este método debes ingresar al portal de clientes con el usuario y contraseña que te llegó vía SMS cuando contrataste el servicio. Si no te llegó tu usuario y contraseña, los perdiste o simplemente no los recuerdas, por favor comunícate vía WhatsApp y con gusto te los proporcionaremos."]} 
+            linkUrl="https://onfiber.mikrowisp.net/cliente/login"
+            linkText="PORTAL DE CLIENTES"
+          />
+          <DialogBasicOne
+          client:idle
+      imageSrc="/pago-fisico.jpg"
+      imageAlt="Pagar en puntos físicos"
+      title="Pagar en puntos físicos"
+      subtitle="Puntos de pago"
+      descriptions={[
+        "Estos son nuestros puntos de pago:",
+        "MONTE VERDE: Esquina Senecio y Garambullo #186 'Mini Super Mendoza'",
+        "PASEOS DE SAN ANTONIO: Avenida Rancho San Antonio esquina Paseo de la Habana 'Abarrotes Gaby'",
+        "HACIENDA SAN MARCOS: Avenida Hacienda Santoral, cerca del Oxxo 'Mini Super San Marcos'",
+        "URBI VILLAS DEL VERGEL: San Diego OTE #301 'URBI INTERNET'",
+        "Santa Monica: San Andres y San Esteban 'Mr. FROGS Santa Monica'",
+        "Cartuja: 'SUPER LA CARTUJA.'",
+        "Recuerda que es importante llevar el monto exacto y proporcionar el número de cuenta o referencia que te hemos asignado."
+      ]}
+    />
+		</div>
+        
+        <div class="flex flex-grow ">
+            
+        </div>
+		<div class="px-4">
+			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto mt-8 mb-4 ">
+				<EmpresarialButton/>
+				<HomeButton/>
+				<PaymentsButton/>
+			</div>
+		</div>
+        
+    </main>
+</LayaoutNoOneScreen>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+		font-family: 'Titillium Web', 'Chakra Petch', sans-serif;
+    }
+</style>
+
+

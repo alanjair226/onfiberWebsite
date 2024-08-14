@@ -1,0 +1,39 @@
+---
+import LayoutDetallePaquetes from '../../layouts/LayoutDetallePaquetes.astro';
+
+---
+
+<LayoutDetallePaquetes 
+title="PLAN BASICO"
+mb="30" 
+dispositivos='2-4' 
+color='#1E90FF' 
+scolor='#105fad'
+homeOffice='NO' 
+streaming='HD' 
+gaming='NO'  
+heroImage='/background-paquetes.png'
+descripcion='El plan perfecto para mantenerte conectado sin complicaciones. Ideal para hogares pequeños que quieren disfrutar de una navegación tranquila y redes sociales al día.'>
+</LayoutDetallePaquetes>
+
+<style>
+	main {
+		margin: 0;
+		padding: 1rem; 
+        padding-top: 0; 
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	.color-principal {
+		color: #D3A7E4;
+	}
+
+	/* Evitar subrayado en los enlaces que envuelven las cards */
+	a.no-underline {
+		text-decoration: none;
+		display: block;
+	}
+</style>

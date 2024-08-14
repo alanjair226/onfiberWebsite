@@ -1,0 +1,39 @@
+---
+import LayoutDetallePaquetes from '../../layouts/LayoutDetallePaquetes.astro';
+
+---
+
+<LayoutDetallePaquetes 
+title="PLAN INTERMEDIO"
+mb="70" 
+dispositivos='4-7' 
+color='#FF6F61' 
+scolor='#d24436'
+homeOffice='NO' 
+streaming='HD' 
+gaming='NO'  
+heroImage='/background-paquetes.png'
+descripcion='¡Sube el nivel! Este plan es perfecto para familias que disfrutan de un poco de todo: streaming, redes sociales, y mucha conexión para todos.'>
+</LayoutDetallePaquetes>
+
+<style>
+	main {
+		margin: 0;
+		padding: 1rem; 
+        padding-top: 0; 
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	.color-principal {
+		color: #D3A7E4;
+	}
+
+	/* Evitar subrayado en los enlaces que envuelven las cards */
+	a.no-underline {
+		text-decoration: none;
+		display: block;
+	}
+</style>

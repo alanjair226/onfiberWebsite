@@ -2,23 +2,23 @@
 import LayoutDetallePaquetes from '../../layouts/LayoutDetallePaquetes.astro';
 
 import EmpresarialButton from '../../components/buttons/EmpresarialButton.astro';
-import TestimoniosButton from '../../components/buttons/TestimoniosButton.astro';
+import TestimoniosButton from '../../components/buttons/PaymentsButton.astro';
 import HomeButton from '../../components/buttons/HomeButton.astro';
 const { searchParams } = Astro.url;
 const paramValue = searchParams.get('paramName'); // Reemplaza 'paramName' con el nombre de tu query parameter
 ---
 
 <LayoutDetallePaquetes 
+title="PLAN PRO"
 mb="100" 
-dispositivos='2' 
-color='#1E90FF' 
-scolor='#105fad'
-hommeOffice='no' 
-streaming='hd' 
-gaming='no'  
+dispositivos='5-10' 
+color='#FFB300' 
+scolor='#b98b1e'
+homeOffice='1' 
+streaming='QHD' 
+gaming='SI'  
 heroImage='/background-paquetes.png'
-descripcion='Ideal para navegar en internet, usar redes sociales y ver videos en calidad estándar en hogares pequeños.'>
-
+descripcion='Cuando el trabajo y el entretenimiento son igual de importantes, este plan te respalda en todo momento. Videollamadas, streaming y diversión, todo sin interrupciones.'>
 </LayoutDetallePaquetes>
 
 <style>

@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+  svg: string;
+}
+
+const { title, svg } = Astro.props;
+---
+
+<div class=" justify-between flex flex-col w-full  lg:w-1/4 xl:w-1/5  bg-white bg-opacity-0 backdrop-blur-sm border-2 rounded-lg border-white-300 px-4 py-1 lg:px-2 ">
+    <img src={svg} alt={`${title} icon`} class="icon w-16 md:w-24" />
+    <p>{title}</p>
+</div>
+

@@ -6,12 +6,13 @@ interface Props {
 	scolor:string;
 	heroImage?: string;
 	gaming: string;
-	hommeOffice: string;
+	homeOffice: string;
 	streaming: string;
 	dispositivos: string;
 	descripcion: string;
+	title:string;
 }
-const { mb, heroImage, color, gaming, hommeOffice, streaming, dispositivos, descripcion, scolor } =
+const { mb, heroImage, color, gaming, homeOffice, streaming, dispositivos, descripcion, scolor, title } =
 	Astro.props;
 import "@fontsource/titillium-web";
 import "@fontsource/chakra-petch";
@@ -19,7 +20,7 @@ import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 import EmpresarialButton from "../components/buttons/EmpresarialButton.astro";
 import HomeButton from "../components/buttons/HomeButton.astro";
-import TestimoniosButton from "../components/buttons/TestimoniosButton.astro";
+import PaymentsButton from "../components/buttons/PaymentsButton.astro";
 import { TextEffect } from "../components/jsx/text-effect";
 ---
 
@@ -32,7 +33,7 @@ import { TextEffect } from "../components/jsx/text-effect";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/Logo.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{mb}</title>
+		<title>{title}</title>
 		<ViewTransitions/>
 	</head>
 	<body class="bg-gray-900 text-white">
@@ -41,17 +42,18 @@ import { TextEffect } from "../components/jsx/text-effect";
 			<Navbar/>
 
 			<div class="relative z-10 flex flex-col items-center justify-start h-full pt-24 lg:pt-24">
-				<main class="flex flex-col h-full  w-full p-4 px-8 ">
-					<div
-							class="h-full w-full flex flex-col items-center p-4 rounded-lg mb-4 shadow-inner shadow-white lg:flex-row lg:full lg:gap-10 lg:p-4 xl:p-48 lg:items-center bg-opacity-0 backdrop-blur-sm  justify-between" 
+				<main class="flex flex-col h-full  w-full p-4 px-4 ">
+					<div class="flex justify-center items-center h-full">
+						<div
+							class="h-full w-full lg:h-fit lg:w-fit flex flex-col items-center p-2 sm:p-4 rounded-lg mb-4 shadow-inner shadow-white lg:flex-row lg:full lg:gap-10 lg:p-4 xl:px-24 lg:items-center bg-opacity-0 backdrop-blur-sm  justify-between" 
 							style=`border: solid 2px ${color};`
 							>
-							<div class="flex flex-col w-full">
+							<div class="flex flex-col w-full ">
 								<div
-								class="w-full p-8 text-center rounded-lg border-white border-2 mt-5 chackra-petch"
+								class="w-full p-8 text-center rounded-lg border-white border-2 mt-2 sm:mt-5 chackra-petch"
 								style=`background: linear-gradient(135deg, ${color}, ${scolor});`
 								>
-								<p class="mb text-3xl sm:text-3xl font-bold">100 Megas</p>
+								<p class="mb text-3xl sm:text-3xl font-bold">{mb} Megas</p>
 								</div>
 								<TextEffect client:idle
 									per="word"
@@ -63,8 +65,8 @@ import { TextEffect } from "../components/jsx/text-effect";
 								</TextEffect>
 								
 	
-								<div class="w-full lg:flex flex-row hidden ">
-									<div class="flex flex-row gap-3 w-2/3 py-2 items-center">
+								<div class="w-full lg:flex flex-row hidden justify-evenly my-4 ">
+									<div class="flex flex-row gap-3 py-2 items-center  border-2 rounded-md p-2 shadow-inner shadow-white bg-opacity-0 backdrop-blur-sm bg-white">
 										<img
 											src="/wifi.svg"
 											alt={`wifi icon`}
@@ -73,7 +75,7 @@ import { TextEffect } from "../components/jsx/text-effect";
 										<p>WIFI 2.4G Y 5G</p>
 									</div>
 	
-									<div class="flex flex-row gap-3 w-2/3 py-2 items-center">
+									<div class="flex flex-row gap-3  py-2 items-center  border-2 rounded-md p-2 shadow-inner shadow-white bg-opacity-0 backdrop-blur-sm bg-white">
 										<img
 											src="/fibra.svg"
 											alt={`fibra icon`}
@@ -84,8 +86,8 @@ import { TextEffect } from "../components/jsx/text-effect";
 								</div>
 							</div>
 							
-							<div class="w-2/3 flex flex-col lg:hidden items-center mb-12">
-								<div class="flex flex-row gap-3 w-2/3 py-2 mt-4 items-center">
+							<div class="w-full flex flex-row lg:hidden justify-evenly ">
+								<div class="flex flex-row gap-1  py-2  items-center border-2 rounded-md p-2 shadow-inner shadow-white bg-opacity-0 backdrop-blur-sm bg-white">
 									<img
 										src="/wifi.svg"
 										alt={`wifi icon`}
@@ -94,7 +96,7 @@ import { TextEffect } from "../components/jsx/text-effect";
 									<p>WIFI 2.4G Y 5G</p>
 								</div>
 	
-								<div class="flex flex-row gap-3 w-2/3 py-2 items-center">
+								<div class="flex flex-row gap-1  py-2 items-center  border-2 rounded-md p-2 shadow-inner shadow-white bg-opacity-0 backdrop-blur-sm bg-white">
 									<img
 										src="/fibra.svg"
 										alt={`fibra icon`}
@@ -104,37 +106,41 @@ import { TextEffect } from "../components/jsx/text-effect";
 								</div>
 							</div>
 							
-							<div class="w-full flex flex-col justify-center items-center lg:w-full mb-12">
+							<div class="w-full flex flex-col items-center  lg:w-full mb-4 lg:mb-12">
 								
-									<h3 class="text-lg font-bold mb-2 text-cente text-center px-4 rounded-2xl shadow-md"
-									style=`background: linear-gradient(135deg, ${color}, ${scolor});`>
+									<h3 class="text-lg font-bold mb-4 text-center px-4 rounded-2xl shadow-md w-full max-w-md"
+									style=`background: linear-gradient(135deg, ${scolor}, ${color});`>
 										Recomendaciones
 									</h3>
-									<div class="flex flex-row w-full justify-between gap-12 font-medium">
-										<ul class="w-full">
+									<div class="flex flex-row w-full gap-4 sm:gap-12 font-medium justify-evenly ">
+										<ul class="w-full flex flex-col items-center">
 											<li class="inline-flex gap-2"><p class="font-bold">Dispositivos:</p> {dispositivos}</li>
-											<li>Home office: {hommeOffice}</li>
+											<li class="inline-flex gap-2"><p class="font-bold">Trabajo en casa:</p> {homeOffice}</li>
 										</ul>
 									
-										<ul >
-											<li >Gaming: {gaming}</li>
-											<li>Streaming: {streaming}</li>
+										<ul class="w-full flex flex-col items-center" >
+											<li class="inline-flex gap-2"><p class="font-bold">videojuegos:</p> {gaming}</li>
+											<li class="inline-flex gap-2"><p class="font-bold">Video:</p> {streaming}</li>
 										</ul>
 									</div>
-							
+									<a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black lg:block text-base text-center mb-2 hidden w-full max-w-sm my-8 ">CONTRATAR</a>
+
 									
 							</div>
 							
 							
 						</div>
+					</div>
+					
 					<div class="flex flex-grow ">
 						
 					</div>
 					<div>
-						<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
+						<a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black block text-base text-center my-0 sm:my-4 lg:hidden">CONTRATAR</a>
+						<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto px-4">
 							<EmpresarialButton/>
 							<HomeButton/>
-							<TestimoniosButton/>
+							<PaymentsButton/>
 						</div>
 					</div>
 					

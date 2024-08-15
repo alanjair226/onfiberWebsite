@@ -47,6 +47,10 @@ export function AccordionVariant() {
             <p className=''>
               Para pagar por cualquiera de los métodos anteriores es necesario ingresar al <a href='https://onfiber.trytoku.com/' className='underline font-semibold text-pink-400'>Portal de pago</a> con tu número de usuario y elegir el método deseado.
             </p>
+            <p className=' font-bold'>
+              Si no conoces tu número de cliente favor de comunicarte con nosotros via whatsapp para que un agente te ayude en el proceso
+            </p>
+            <p className="text-lg">WHATSAPP: <a href="https://wa.link/57q5fq" target='_blank' class="text-pink-400 font-bold">449 327 51 98</a></p>
             <div className='flex flex-col gap-4 text-start text-lg text-zinc-300 dark:text-zinc-300'>
               <p className='text-xl font-semibold text-center'>Pago por Oxxo</p>
               <p>

@@ -15,50 +15,54 @@ import LayaoutNoOneScreenHero from "../layouts/LayaoutNoOneScreenHero.astro"
                     <p class="text-lg">Bienvenido a OnFiber. Aquí encontrarás todo lo que necesitas para comenzar.</p>
                 </div>
                 <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4">¿Cómo pagar?</h3>
+                    <h3 class="text-2xl font-semibold mb-4">Métodos de pago</h3>
                     <div class="space-y-4">
-                        <details class="bg-gray-900 p-4 rounded-lg">
-                            <summary class="font-semibold text-lg cursor-pointer">Pagar por Oxxo</summary>
-                            <div class="mt-2">
-                                <p>Para pagar por Oxxo es necesario ingresar al portal de Onfiber. Para ingresar, al contratar el servicio, el sistema le hizo llegar un usuario y contraseña vía SMS al número registrado en la contratación. Estos son sus datos para ingresar al portal.</p>
-                                <p class="mt-2"><a href="https://onfiber.mikrowisp.net/cliente/login" target="_blank" class="text-blue-400 underline">PORTAL DE CLIENTES</a></p>
-                                <p>Si no cuenta con estos datos, puede comunicarse por WhatsApp al siguiente número para que se los proporcione: <a href="https://wa.link/jh5htf" target="_blank" class="text-blue-400 underline">4493275135</a>.</p>
-                                <p class="mt-2">Recomendamos descargar el manual para no tener problemas en el proceso: <a href="assets/docs/manual_de_pago_oxxo_onfiber.pdf" target="_blank" class="text-blue-400 underline">Descargar manual</a></p>
-                            </div>
-                        </details>
-                        <details class="bg-gray-900 p-4 rounded-lg">
-                            <summary class="font-semibold text-lg cursor-pointer">Openpay (Tarjeta de débito o crédito)</summary>
-                            <div class="mt-2">
-                                <p>Para pagar por este método debes ingresar al portal de clientes con el usuario y contraseña que te llegó vía SMS cuando contrataste el servicio. <a href="https://onfiber.mikrowisp.net/cliente/login" target="_blank" class="text-blue-400 underline">PORTAL DE CLIENTES</a></p>
-                                <p class="mt-2">Si no te llegó tu usuario y contraseña, los perdiste o simplemente no los recuerdas, por favor comunícate vía WhatsApp y con gusto te los proporcionaremos:</p>
-                                <p class="mt-2">WhatsApp: <a href="https://wa.link/jh5htf" target="_blank" class="text-blue-400 underline">449 327 51 35</a>.</p>
-                                <p class="mt-2">A continuación, un manual que te enseña paso por paso cómo pagar vía Openpay:</p>
-                                <p class="mt-2"><a href="assets/docs/Manual de pago Openpay.pdf" target="_blank" class="text-blue-400 underline">Descargar manual</a></p>
-                            </div>
-                        </details>
-                        <details class="bg-gray-900 p-4 rounded-lg">
-                            <summary class="font-semibold text-lg cursor-pointer">¿Puedo pagar en puntos físicos?</summary>
-                            <div class="mt-2">
-                                <p>Estos son nuestros puntos de pago:</p>
-                                <ul class="list-disc pl-5 mt-2 space-y-2">
-                                    <li>MONTE VERDE: Esquina Senecio y Garambullo #186 "Mini Super Mendoza"</li>
-                                    <li>PASEOS DE SAN ANTONIO: Avenida Rancho San Antonio esquina Paseo de la Habana "Abarrotes Gaby"</li>
-                                    <li>HACIENDA SAN MARCOS: Avenida Hacienda Santoral, cerca del Oxxo "Mini Super San Marcos"</li>
-                                    <li>URBI VILLAS DEL VERGEL: San Diego OTE #301 "URBI INTERNET"</li>
-                                    <li>Santa Monica: San Andres y San Esteban "Mr. FROGS Santa Monica"</li>
-									<li>Cartuja: "SUPER LA CARTUJA."</li>
-                                </ul>
-                                <p class="mt-2">Recuerda que es importante llevar el monto exacto y proporcionar el número de cuenta o referencia que te hemos asignado.</p>
-                            </div>
-                        </details>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg">Contamos con diferentes métodos de pago para que elijas el que más te guste:</h4>
+                            <ul class='list-disc pl-5 mt-2'>
+                                <li>Pago en efectivo</li>
+                                <li>Pago con tarjeta</li>
+                                <li>Transferencia</li>
+                                <li>Domiciliado de tarjeta</li>
+                            </ul>
+                            <br>
+                            <p class=''>
+                                Para pagar por cualquiera de los métodos es necesario ingresar al <a href='https://onfiber.trytoku.com/' class='underline font-semibold text-pink-400'>Portal de pago</a> con tu número de usuario y elegir el método deseado.
+                              </p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h4 class="font-semibold text-xl text-center">Pago por Oxxo</h4>
+                            <p>Para pagar por Oxxo es necesario ingresar al portal de Onfiber. Para ingresar, al contratar el servicio, el sistema le hizo llegar un usuario y contraseña vía SMS al número registrado en la contratación. Estos son sus datos para ingresar al portal.</p>
+                            <p class="mt-2"><a href="https://onfiber.mikrowisp.net/cliente/login" target="_blank" class="text-pink-400 underline">PORTAL DE CLIENTES</a></p>
+                            <p>Si no cuenta con estos datos, puede comunicarse por WhatsApp al siguiente número para que se los proporcione: <a href="https://wa.link/jh5htf" target="_blank" class="text-pink-400 underline">4493275135</a>.</p>
+                            <p class="mt-2">Recomendamos descargar el manual para no tener problemas en el proceso: <a href="/docs/manual_de_pago_oxxo_onfiber.pdf" target="_blank" class="text-pink-400 underline">Descargar manual</a></p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h4 class="font-semibold text-xl text-center">Pago en puntos físicos</h4>
+                            <p>Estos son nuestros puntos de pago:</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>MONTE VERDE: Esquina Senecio y Garambullo #186 "Mini Super Mendoza"</li>
+                                <li>PASEOS DE SAN ANTONIO: Avenida Rancho San Antonio esquina Paseo de la Habana "Abarrotes Gaby"</li>
+                                <li>HACIENDA SAN MARCOS: Avenida Hacienda Santoral, cerca del Oxxo "Mini Super San Marcos"</li>
+                                <li>URBI VILLAS DEL VERGEL: San Diego OTE #301 "URBI INTERNET"</li>
+                                <li>Santa Mónica: San Andrés y San Esteban "Mr. FROGS Santa Mónica"</li>
+                                <li>Cartuja: "SUPER LA CARTUJA."</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card mb-8 p-6 bg-gray-900 text-white rounded-lg">
                     <h3 class="text-xl font-semibold mb-3">¿Cómo ponerme en contacto?</h3>
-                    <p class="mb-3">Los únicos números para dar soporte y resolver dudas son los siguientes:</p>
-                    <p class="mb-3">WhatsApp: <a href="https://wa.link/jh5htf" target="_blank" class="text-blue-400 underline">449 327 51 35</a>.</p>
-                    <p class="mb-3">Llamada telefónica: 449 388 09 98</p>
-                    <p class="font-bold">FAVOR DE NO COMUNICARSE CON SU INSTALADOR O VENDEDOR.</p>
+                    <p class="mb-3">Los únicos números para soporte, contratación y resolver dudas son los siguientes:</p>
+                    <div class="flex flex-row items-center gap-2">
+                        <img src="/phone.svg" alt="Teléfono" class="h-10"/>
+                        <p class="text-lg">LLÁMANOS: <a href="tel:4493880998" class="text-pink-400 font-bold">449 388 09 98</a></p>
+                    </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <img src="/whatsapp.svg" alt="WhatsApp" class="h-10"/>
+                        <p class="text-lg">WHATSAPP: <a href="https://wa.link/57q5fq" target='_blank' class="text-pink-400 font-bold">449 327 51 98</a></p>
+                    </div>
+                    <p class="font-bold text-red-600">FAVOR DE NO COMUNICARSE CON SU INSTALADOR O VENDEDOR.</p>
                 </div>
                 <div class="card p-6 bg-gray-900 text-white rounded-lg">
                     <h3 class="text-xl font-semibold mb-3">Cuidados y recomendaciones con el modem</h3>
@@ -70,12 +74,12 @@ import LayaoutNoOneScreenHero from "../layouts/LayaoutNoOneScreenHero.astro"
             </div>
         </section>
     </div>
-</LayaoutNoOneScreenHer>
+</LayaoutNoOneScreenHero>
 
 <style>
     .container {
         max-width: 1200px;
         margin: 0 auto;
-		font-family: 'Titillium Web', 'Chakra Petch', sans-serif;
+        font-family: 'Titillium Web', 'Chakra Petch', sans-serif;
     }
 </style>

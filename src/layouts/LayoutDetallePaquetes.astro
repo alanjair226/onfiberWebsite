@@ -11,8 +11,9 @@ interface Props {
 	dispositivos: string;
 	descripcion: string;
 	title:string;
+	href:string;
 }
-const { mb, heroImage, color, gaming, homeOffice, streaming, dispositivos, descripcion, scolor, title } =
+const { mb, heroImage, color, gaming, homeOffice, streaming, dispositivos, descripcion, scolor, title, href } =
 	Astro.props;
 import "@fontsource/titillium-web";
 import "@fontsource/chakra-petch";
@@ -123,7 +124,7 @@ import { TextEffect } from "../components/jsx/text-effect";
 											<li class="inline-flex gap-2"><p class="font-bold">Video:</p> {streaming}</li>
 										</ul>
 									</div>
-									<a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black lg:block text-base text-center mb-2 hidden w-full max-w-sm my-8 ">CONTRATAR</a>
+									<a href={href} class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black lg:block text-base text-center mb-2 hidden w-full max-w-sm my-8 ">CONTRATAR</a>
 
 									
 							</div>
@@ -136,7 +137,7 @@ import { TextEffect } from "../components/jsx/text-effect";
 						
 					</div>
 					<div>
-						<a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black block text-base text-center my-0 sm:my-4 lg:hidden">CONTRATAR</a>
+						<a href={href} class="px-5 py-2 bg-white bg-opacity-5 backdrop-blur-sm border-2 border-white-300 text-white-300 rounded-full transition-colors duration-300 hover:bg-white hover:text-black block text-base text-center my-0 sm:my-4 lg:hidden">CONTRATAR</a>
 						<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto px-4">
 							<EmpresarialButton/>
 							<HomeButton/>
@@ -160,3 +161,4 @@ import { TextEffect } from "../components/jsx/text-effect";
 		font-family:'Chakra Petch','Titillium Web', sans-serif ;
 	}
 </style>
+<script id="growth_tool" src="https://cdn.chatapi.net/widget/widget.js?wId=2cc542ae-8eb9-49f7-9423-6d1e975acdcf"></script>

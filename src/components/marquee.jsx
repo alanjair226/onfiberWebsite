@@ -15,9 +15,14 @@ const items = [
         "/Establecimientos-pago//pago-tarjeta.png",
     },
     {
-      title: "Pago con tarjeta",
+      title: "Todo grupo wallmart",
       image:
         "/Establecimientos-pago/walmart.png",
+    },
+    {
+      title: "Bodega Aurrera",
+      image:
+        "/Establecimientos-pago/aurrera.png",
     },
     
   ]

@@ -33,6 +33,7 @@ export function AccordionVariant() {
           </div>
         </AccordionTrigger>
         <AccordionContent className='origin-left border-b-2 border-white'>
+        <Page/>
           <div className=' flex flex-col gap-4 text-start text-lg  pl-6 pr-2 text-zinc-300 dark:text-zinc-300'>
             <p className='text-start text-zinc-300 dark:text-zinc-300'>
               Contamos con diferentes métodos de pago para que elijas el que más te guste:
@@ -44,7 +45,7 @@ export function AccordionVariant() {
               <li>Domiciliado de tarjeta</li>
             </ul>
             <p className=''>
-              Para pagar por cualquiera de los métodos es necesario ingresar al <a href='https://onfiber.trytoku.com/' className='underline font-semibold text-pink-400'>Portal de pago</a> con tu número de usuario y elegir el método deseado.
+              Para pagar por cualquiera de los métodos anteriores es necesario ingresar al <a href='https://onfiber.trytoku.com/' className='underline font-semibold text-pink-400'>Portal de pago</a> con tu número de usuario y elegir el método deseado.
             </p>
             <div className='flex flex-col gap-4 text-start text-lg text-zinc-300 dark:text-zinc-300'>
               <p className='text-xl font-semibold text-center'>Pago por Oxxo</p>
@@ -59,6 +60,7 @@ export function AccordionVariant() {
                 Recomendamos descargar el manual para no tener problemas en el proceso: <a href="/docs/manual_de_pago_oxxo_onfiber.pdf" target="_blank" class="text-pink-400 underline">Descargar manual</a>
               </p>
             </div>
+            
             <div className='flex flex-col gap-4 text-start text-lg text-zinc-300 dark:text-zinc-300'>
               <p className='text-xl font-semibold text-center'>Pago en puntos físicos</p>
               <ul className="list-disc pl-5 mt-2 space-y-2">
@@ -71,7 +73,7 @@ export function AccordionVariant() {
               </ul>
             </div>
           </div>
-          <Page/>
+          
         </AccordionContent>
       </AccordionItem>
 

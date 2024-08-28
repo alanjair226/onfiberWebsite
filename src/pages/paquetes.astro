@@ -10,88 +10,86 @@ import CardPaquetes from '../components/CardPaquetes.astro';
 <Layout title="OnFiber Empresarial" heroImage='/background-paquetes.png'>
     <main class="flex flex-col h-full  w-full ">
         <h1 class="text-3xl md:text-2xl lg:text-4xl mb-3 tracking-wides text-center">PAQUETES</h1>
-		<div class="flex flex-col text-center md:px-11 lg:px-5 xl:px-10 h-full lg:h-full lg:mb-1 xl:h-full w-full justify-end">
-			<div class="w-full flex flex-col lg:flex-row gap-4 justify-center">
-				<CardPaquetes 
-  href='/paquetes/30mb' 
-  color='#1E90FF' 
-  title="PLAN BASICO" 
-  mbps="30 Megas" 
-  price="300" 
-  desc='Conéctate sin complicaciones. Ideal para hogares pequeños y navegación tranquila.' 
-/>
+        <div class="flex flex-col text-center md:px-11 lg:px-5 xl:px-10 h-full lg:h-full lg:mb-1 xl:h-full w-full justify-end">
+            <div class="w-full flex flex-col lg:flex-row gap-4 justify-center">
+                <CardPaquetes 
+                    href='/paquetes/30mb' 
+                    color='#1E90FF' 
+                    title="PLAN BÁSICO" 
+                    mbps="30 Megas" 
+                    price="300" 
+                    desc='Conéctate sin complicaciones. Ideal para hogares pequeños y navegación tranquila.' 
+                />
 
-<CardPaquetes 
-  href='/paquetes/70mb' 
-  color='#FF6F61' 
-  title="PLAN INTERMEDIO" 
-  mbps="70 Megas" 
-  price="350" 
-  desc='Un plan versátil para familias con múltiples actividades en línea.' 
-/>
+                <CardPaquetes 
+                    href='/paquetes/70mb' 
+                    color='#FF6F61' 
+                    title="PLAN INTERMEDIO" 
+                    mbps="70 Megas" 
+                    price="350" 
+                    desc='Un plan versátil para familias con múltiples actividades en línea.' 
+                />
 
-<CardPaquetes 
-  href='/paquetes/100mb' 
-  color='#FFB300' 
-  title="PLAN PRO" 
-  mbps="100 Megas" 
-  price="450" 
-  desc='Equilibrio perfecto entre trabajo y entretenimiento, sin interrupciones.' 
-/>
+                <CardPaquetes 
+                    href='/paquetes/100mb' 
+                    color='#FFB300' 
+                    title="PLAN PRO" 
+                    mbps="100 Megas" 
+                    price="450" 
+                    desc='Equilibrio perfecto entre trabajo y entretenimiento, sin interrupciones.' 
+                />
 
-<CardPaquetes 
-  href='/paquetes/200mb' 
-  color='#8A2BE2' 
-  title="PLAN MASTER PRO" 
-  mbps="200 Megas" 
-  price="550" 
-  desc='Máxima conexión para múltiples usuarios y tareas exigentes.' 
-/>
-			</div>
-		</div>
+                <CardPaquetes 
+                    href='/paquetes/200mb' 
+                    color='#8A2BE2' 
+                    title="PLAN MASTER PRO" 
+                    mbps="200 Megas" 
+                    price="550" 
+                    desc='Máxima conexión para múltiples usuarios y tareas exigentes.' 
+                />
+            </div>
+        </div>
         <div class="flex flex-col justify-center h-full items-center">
-			<p>PARA CONTRTAR:</p>
-          <div class="flex flex-row items-center gap-2">
-            <img src="/phone.svg" alt="Mail" class="h-14">
-            <p class="text-xl ">LLÁMANOS: <a href="tel:4493880998" class="color-principal font-bold">449 388 09 98</a></p>
-          </div>
-          <div class="flex flex-row items-center gap-2">
-            <img src="/whatsapp.svg" alt="Mail" class="h-14">
-            <p class="text-xl ">WHATSAPP: <a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="color-principal font-bold">449 327 51 98</a></p>
-          </div>
+            <p>PARA CONTRATAR:</p>
+            <div class="flex flex-row items-center gap-2">
+                <img src="/phone.svg" alt="Teléfono" class="h-14">
+                <p class="text-xl">LLÁMANOS: <a href="tel:4493880998" class="color-principal font-bold">449 388 09 98</a></p>
+            </div>
+            <div class="flex flex-row items-center gap-2">
+                <img src="/whatsapp.svg" alt="WhatsApp" class="h-14">
+                <p class="text-xl">WHATSAPP: <a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio." class="color-principal font-bold">449 327 51 98</a></p>
+            </div>
         </div>
-        <div class="flex flex-grow ">
-            
+        <div class="flex flex-grow">
         </div>
-		<div>
-			<div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
-				<EmpresarialButton/>
-				<HomeButton/>
-				<PaymentsButton/>
-			</div>
-		</div>
-        
+        <div>
+            <div class="flex flex-row justify-center w-full md:w-2/3 lg:w-1/2 m-auto">
+                <EmpresarialButton/>
+                <HomeButton/>
+                <PaymentsButton/>
+            </div>
+        </div>
     </main>
 </Layout>
 
 <style>
-	main {
-		margin: 0;
-		padding: 1rem; 
+    main {
+        margin: 0;
+        padding: 1rem; 
         padding-top: 0; 
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
 
-	.color-principal {
-		color: #D3A7E4;
-	}
+    .color-principal {
+        color: #D3A7E4;
+    }
 
-	/* Evitar subrayado en los enlaces que envuelven las cards */
-	a.no-underline {
-		text-decoration: none;
-		display: block;
-	}
+    /* Evitar subrayado en los enlaces que envuelven las cards */
+    a.no-underline {
+        text-decoration: none;
+        display: block;
+    }
 </style>

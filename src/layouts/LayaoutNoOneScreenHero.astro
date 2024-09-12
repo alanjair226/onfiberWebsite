@@ -23,11 +23,13 @@ import { ViewTransitions } from 'astro:transitions';
         <ViewTransitions />
     </head>
     <body class="bg-black text-white">
+        <Navbar back/>
         <section class="relative h-svh bg-cover bg-center" style={`background-image: url(${heroImage});`}>
             <div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
-            <div class="relative z-10 flex flex-col items-center justify-center h-full  text-center px-4">
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-0">
                 <slot name="hero" />
+                <img src="/buttom-arrow.svg" alt="Contactanos" class="absolute bottom-16">
             </div>
         </section>
         <main class="bg-black text-white p-8">

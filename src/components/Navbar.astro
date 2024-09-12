@@ -1,15 +1,25 @@
 ---
+interface Props {
+  back?: boolean;
+}
+
+const {  back } = Astro.props;
 ---
 
-<nav class="bg-gray-800 bg-opacity-5 backdrop-blur-sm p-4 fixed w-full px-5 top-0 z-50 flex justify-center md:justify-between align-middle lg:px-20 py-6 md:py-4">
+<nav class="bg-gray-800 bg-opacity-5 backdrop-blur-sm p-4 fixed w-full px-5 top-0 z-50 flex  justify-between align-middle lg:px-20 py-6 md:py-4">
   <div class="text-xl font-bold text-purple-300 flex flex-row items-center">
     <a href="/" class="flex flex-row items-center ">
-      <img src="/Logo.svg" alt="ONFIBER Logo" class="h-10 md:hidden">
-      <img src="/onfiber.svg" alt="ONFIBER Logo" class="h-6">
+      <img src="/Logo.svg" alt="ONFIBER Logo" class="h-8 md:hidden">
+      <img src="/onfiber.svg" alt="ONFIBER Logo" class="h-5 md:h-8">
     </a>
   </div>
   <div class="flex space-x-4">
     <a href="https://api.whatsapp.com/send?phone=5214493275135&text=Hola!%2C%20me%20interesa%20contratar%20su%20servicio" target="_blank" class="px-5 py-2 border-2 border-white-300  text-black rounded-full bg-white transition-colors duration-300 hover:bg-transparent hover:text-white hidden md:block">CONTRATAR</a>
     <a href="/contacto" class="px-5 py-2  text-white rounded-full border-2 border-white transition-colors duration-300 hover:bg-gray-400 hover:text-white  hidden md:flex flex-row "> <img src="/headset-icon-white.svg" alt="Contactanos" class="h-6 p-1 stroke-white"> CONTACTANOS</a>
+    {back && (
+      <a href="/" class="px-5 py-2  text-white rounded-full border-2 border-white transition-colors duration-300 hover:bg-gray-400 hover:text-white  flex flex-row items-center "> 
+         <img src="/home-navbar.svg" alt="Contactanos" class="h-6 p-1  stroke-white">Inicio
+      </a>
+    )}
   </div>
 </nav>

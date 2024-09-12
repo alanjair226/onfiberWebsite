@@ -1,0 +1,90 @@
+---
+import LayaoutNoOneScreenHero from "../layouts/LayaoutNoOneScreenHero.astro"
+import { TextEffect } from '../components/jsx/text-effect';
+import Navbar from '../components/Navbar.astro';
+
+---
+
+<LayaoutNoOneScreenHero title="Nosotros" heroImage='/background1.png'>
+	
+    <div slot="hero" class="max-w-6xl p-1" >
+		
+        <h1 class="text-3xl lg:text-5xl font-bold mb-6">NOSOTROS</h1>
+		<TextEffect client:idle
+									per="word"
+									preset="blur"
+									as="p"
+									className="text-lg tracking-widest"
+									>
+									
+Somos OnFiber, una empresa que ofrece internet ilimitado y de alta calidad, incluso en áreas remotas donde otras compañías no llegan. Con nuestra red de fibra óptica y soluciones por antena, aseguramos que siempre estés conectado. Nos enorgullece brindar una conexión rápida y confiable, respaldada por un soporte técnico dedicado.</TextEffect>
+	</div>
+    <div id="lazy-element" slot="content" class="py-20">
+        <div class="flex flex-col lg:flex-row gap-8 text-center md:text-start justify-between px-4 lg:px-8 h-full ">
+			<div class="flex-1">
+				<h1 class="text-2xl mb-2 tracking-widest font-medium text-center">MISIÓN</h1>
+				
+				<TextEffect client:visible
+									per="word"
+									preset="blur"
+									as="p"
+									className="text-lg tracking-widest"
+									>
+									Ser la empresa líder en conectividad, reconocida por llevar internet de alta calidad a todos los rincones, superando las barreras geográficas y asegurando que cada persona, sin importar su ubicación, pueda acceder a las oportunidades y beneficios del mundo digital.
+								</TextEffect>
+			</div>
+            <div class="flex-1">
+				<h1 class="text-2xl  mb-2 tracking-widest font-medium text-center">VISIÓN</h1>
+				
+				<TextEffect client:visible
+									per="word"
+									preset="blur"
+									as="p"
+									className="text-lg tracking-widest"
+									>
+									Brindar acceso a internet confiable y de alta velocidad a comunidades desatendidas, utilizando tecnología avanzada para conectar a nuestros clientes con el mundo. Nos esforzamos por ofrecer un servicio excepcional, priorizando la satisfacción del cliente y mejorando continuamente nuestras soluciones para adaptarnos a sus necesidades cambiantes.
+								</TextEffect>
+			</div>
+            <div id="text-effect-container" class="flex-1">
+				<h1 class="text-2xl mb-2 tracking-widest font-medium text-center">VALORES</h1>
+				
+				<TextEffect client:visible
+									per="word"
+									preset="blur"
+									as="p"
+									className="text-lg tracking-widest"
+									>
+
+									Nuestros valores son el compromiso con la calidad, la innovación en conectividad, el servicio al cliente excepcional, la accesibilidad para todos, y la responsabilidad en nuestras operaciones. Nos esforzamos por garantizar un internet confiable y accesible, apoyados por un soporte técnico eficaz y un enfoque constante en la mejora continua.
+									</TextEffect>
+			</div>
+		</div>
+    </div>
+</LayaoutNoOneScreenHero>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: 'Titillium Web', 'Chakra Petch', sans-serif;
+    }
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+    const containers = document.querySelectorAll('.text-effect-container');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('opacity-0');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    containers.forEach(container => observer.observe(container));
+});
+
+</script>
